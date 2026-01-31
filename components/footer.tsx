@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import { Twitter, Linkedin, Instagram, Mail } from "lucide-react"
-import Image from "next/image"
 import ClickSpark from "./react-bits/ClickSpark"
 
 const footerLinks = {
@@ -147,7 +146,7 @@ export function Footer() {
             © {new Date().getFullYear()} 7ZeroMedia. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
-            Powered by artificial intelligence
+            Powered by Laneway
           </p>
         </div>
       </div>
