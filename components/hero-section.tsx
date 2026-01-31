@@ -37,33 +37,10 @@ export function HeroSection() {
             priority
           />
         </motion.div>
-        <h1 className="mb-6 text-5xl font-bold sm:text-6xl md:text-7xl lg:text-8xl">
-          7
-          <span className="gradient-text text-glow-cyan">
-            Zero 
-          </span>
-          Media
-        </h1>
 
         <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground">
           AI Powered Media Marketing For Modern Brands. Transform Your Growth With Intelligent Automation.
         </p>
-
-         {/* <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.35 }}
-        >
-            <motion.span
-              animate={{ y: [0, -6, 0], rotate: [0, 6, -6, 0] }}
-              transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
-              className="text-lg"
-            >
-              🚀
-            </motion.span>
-
-            <span>Coming Soon</span>
-        </motion.div> */}
         <motion.div
             initial={{ scale: 0.95, opacity: 0, y: 16}}
             animate={{ scale: 1, opacity: 1, y: 0 }}
