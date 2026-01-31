@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Twitter, Linkedin, Instagram, Mail } from "lucide-react"
+import Image from "next/image"
 import ClickSpark from "./react-bits/ClickSpark"
 
 const footerLinks = {
@@ -46,9 +47,13 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <a href="#" className="mb-4 inline-flex items-center">
-              <span className="text-2xl font-bold text-foreground">7</span>
-              <span className="text-2xl font-bold gradient-text">Zero</span>
-              <span className="text-2xl font-bold text-foreground">Media</span>
+              <Image
+                src="/Seven-Zero-Logo.png"
+                alt="7ZeroMedia Logo"
+                width={40}
+                height={40}
+                 className="h-30 w-30 object-contain"
+              />
             </a>
             <p className="mb-6 max-w-sm text-muted-foreground">
               AI-powered media marketing for modern brands. Transform your growth with intelligent automation.
@@ -71,7 +76,7 @@ export function Footer() {
           </div>
 
           {/* Links */}
-          <div>
+          {/* <div>
             <h3 className="mb-4 text-sm font-semibold text-foreground">Company</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
@@ -85,9 +90,9 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
-          <div>
+          {/* <div>
             <h3 className="mb-4 text-sm font-semibold text-foreground">Services</h3>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
@@ -101,9 +106,9 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
-          <div>
+          {/* <div>
             <h3 className="mb-4 text-sm font-semibold text-foreground">Resources</h3>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
@@ -117,9 +122,9 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
-          <div>
+          <div className="flex flex-col items-start justify-center lg:items-start">
             <h3 className="mb-4 text-sm font-semibold text-foreground">Legal</h3>
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
