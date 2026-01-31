@@ -6,6 +6,16 @@ import { ArrowRight, Play } from "lucide-react"
 import ColorBends from "@/components/react-bits/color-bends"
 import Image from "next/image"
 
+const shimmerStyle = `
+  @keyframes shine {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+`
 
 export function HeroSection() {
   const { scrollY } = useScroll()
@@ -45,18 +55,21 @@ export function HeroSection() {
             initial={{ scale: 0.95, opacity: 0, y: 16}}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             transition={{ duration: 0.5,  delay: 0.35, ease: "easeOut" }}
-            className="inline-flex items-center gap-3 px-10 py-5 rounded-full bg-gold text-white font-semibold shadow-lg"
+            className="relative inline-flex items-center gap-4 px-12 py-6 rounded-full bg-clip-padding backdrop-blur-md backdrop-saturate-150 backdrop-brightness-100 border border-white/20 text-white font-semibold shadow-[0_0_10px_rgba(252,211,77,0.18)]"
           >
+            {/* Decorative glow (glass) */}
+            <div className="absolute -inset-1 rounded-full blur-3xl bg-linear-to-r from-yellow-400/40 via-pink-400/20 to-violet-400/10 -z-10" />
+
             {/* Animated Rocket */}
             <motion.span
-              animate={{ y: [0, -6, 0], rotate: [0, 6, -6, 0] }}
+                animate={{ y: [0, -6, 0], rotate: [0, 6, -6, 0] }}
               transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
-              className="text-xl"
+                className="text-3xl md:text-4xl"
             >
               🚀
             </motion.span>
 
-            <span>Coming Soon</span>
+              <span className="text-lg md:text-2xl drop-shadow-[0_6px_18px_rgba(0,0,0,0.25)]">Coming Soon</span>
           </motion.div>
       </div>
     </section>
