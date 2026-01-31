@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Twitter, Linkedin, Instagram, Mail } from "lucide-react"
+import Image from "next/image"
 import ClickSpark from "./react-bits/ClickSpark"
 
 const footerLinks = {
