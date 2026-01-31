@@ -3,14 +3,15 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
+import { Ghost, Menu, X } from "lucide-react"
+import Image from "next/image"
 
-const navLinks = [
-  { href: "#services", label: "Services" },
-  { href: "#how-it-works", label: "How It Works" },
-  { href: "#results", label: "Results" },
-  { href: "#testimonials", label: "Testimonials" }
-]
+// const navLinks = [
+//   { href: "#services", label: "Services" },
+//   { href: "#how-it-works", label: "How It Works" },
+//   { href: "#results", label: "Results" },
+//   { href: "#testimonials", label: "Testimonials" }
+// ]
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -34,19 +35,23 @@ export function Navbar() {
           isScrolled ? "glassmorphism" : "bg-transparent"
         }`}
       >
-        <div className="mx-auto max-w-7xl px-6 py-4">
+        <div className="mx-auto max-w-7xl px-6 py-2">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <a href="#" className="flex items-center gap-2">
               <div className="flex items-center">
-                <span className="text-2xl font-bold text-foreground">7</span>
-                <span className="text-2xl font-bold gradient-text">Zero</span>
-                <span className="text-2xl font-bold text-foreground">Media</span>
+                <Image
+                  src="/Seven-Zero-Logo.png"
+                  alt="7ZeroMedia Logo"
+                  width={40}
+                  height={40}
+                  className="h-20 w-20 object-contain"
+                />
               </div>
             </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden items-center gap-8 md:flex">
+            {/* <div className="hidden items-center gap-8 md:flex">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -56,11 +61,11 @@ export function Navbar() {
                   {link.label}
                 </a>
               ))}
-            </div>
+            </div> */}
 
             {/* CTA Button */}
             <div className="hidden md:block">
-              <Button className="glow-cyan-subtle bg-primary text-primary-foreground hover:bg-primary/90">
+              <Button variant="ghost" className="relative inline-flex items-center gap-4 px-12 py-6 rounded-xl bg-black/60 backdrop-blur-md backdrop-saturate-150 backdrop-brightness-100 border border-white/20 text-white font-semibold shadow-[0_0_10px_rgba(252,211,77,0.18)]">
                 Get Started
               </Button>
             </div>
@@ -68,11 +73,12 @@ export function Navbar() {
             {/* Mobile Menu Button */}
             <button
               type="button"
-              className="md:hidden text-foreground"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              className="md:hidden relative inline-flex items-center gap-4 px-6 py-3 rounded-xl bg-black/60 backdrop-blur-md backdrop-saturate-150 backdrop-brightness-100 border border-white/20 text-white font-semibold shadow-[0_0_10px_rgba(252,211,77,0.18)]"
+              // onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              // aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {/* {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />} */}
+              Get Started
             </button>
           </div>
         </div>
@@ -88,7 +94,7 @@ export function Navbar() {
             transition={{ duration: 0.2 }}
             className="fixed inset-x-0 top-16 z-40 glassmorphism mx-4 mt-2 rounded-xl p-6 md:hidden"
           >
-            <div className="flex flex-col gap-4">
+            {/* <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -102,7 +108,7 @@ export function Navbar() {
               <Button className="mt-4 w-full glow-cyan-subtle bg-primary text-primary-foreground">
                 Get Started
               </Button>
-            </div>
+            </div> */}
           </motion.div>
         )}
       </AnimatePresence>
