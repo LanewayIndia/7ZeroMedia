@@ -22,10 +22,21 @@ export function HeroSection() {
   const y = useTransform(scrollY, [0, 600], [0, 120])
 
   return (
-    <section className="relative min-h-screen overflow-hidden px-6 pt-20">
+    <section className="relative h-screen min-h-screen overflow-hidden px-6 pt-20">
       {/* Animated Background */}
       <motion.div style={{ y }} className="absolute inset-0">
-        <ColorBends />
+        <ColorBends className="w-full h-full"
+          rotation={0}
+          speed={0.2}
+          scale={1}
+          frequency={1}
+          warpStrength={1}
+          mouseInfluence={1}
+          parallax={0.5}
+          noise={0.1}
+          transparent
+          autoRotate={0}
+        />
       </motion.div>
 
       {/* Overlay */}
@@ -52,25 +63,25 @@ export function HeroSection() {
           An AI-powered media ecosystem redefining digital narratives through content, culture, and full-scale brand evolution.
         </p>
         <motion.div
-            initial={{ scale: 0.95, opacity: 0, y: 16}}
-            animate={{ scale: 1, opacity: 1, y: 0 }}
-            transition={{ duration: 0.5,  delay: 0.35, ease: "easeOut" }}
-            className="relative inline-flex items-center gap-4 px-12 py-6 rounded-full bg-clip-padding backdrop-blur-md backdrop-saturate-150 backdrop-brightness-100 border border-white/20 text-white font-semibold shadow-[0_0_10px_rgba(252,211,77,0.18)]"
+          initial={{ scale: 0.95, opacity: 0, y: 16 }}
+          animate={{ scale: 1, opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.35, ease: "easeOut" }}
+          className="relative inline-flex items-center gap-4 px-12 py-6 rounded-full bg-clip-padding backdrop-blur-md backdrop-saturate-150 backdrop-brightness-100 border border-white/20 text-white font-semibold shadow-[0_0_10px_rgba(252,211,77,0.18)]"
+        >
+          {/* Decorative glow (glass) */}
+          <div className="absolute -inset-1 rounded-full blur-3xl bg-linear-to-r from-yellow-400/40 via-pink-400/20 to-violet-400/10 -z-10" />
+
+          {/* Animated Rocket */}
+          <motion.span
+            animate={{ y: [0, -6, 0], rotate: [0, 6, -6, 0] }}
+            transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
+            className="text-3xl md:text-4xl"
           >
-            {/* Decorative glow (glass) */}
-            <div className="absolute -inset-1 rounded-full blur-3xl bg-linear-to-r from-yellow-400/40 via-pink-400/20 to-violet-400/10 -z-10" />
+            🚀
+          </motion.span>
 
-            {/* Animated Rocket */}
-            <motion.span
-                animate={{ y: [0, -6, 0], rotate: [0, 6, -6, 0] }}
-              transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
-                className="text-3xl md:text-4xl"
-            >
-              🚀
-            </motion.span>
-
-              <span className="text-lg md:text-2xl drop-shadow-[0_6px_18px_rgba(0,0,0,0.25)]">Coming Soon</span>
-          </motion.div>
+          <span className="text-lg md:text-2xl drop-shadow-[0_6px_18px_rgba(0,0,0,0.25)]">Coming Soon</span>
+        </motion.div>
       </div>
     </section>
   )
