@@ -31,7 +31,7 @@ export function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-opacity-20 backdrop-blur-lg rounded-lg p-0 ${
           isScrolled ? "glassmorphism" : "bg-transparent"
         }`}
       >
@@ -64,22 +64,22 @@ export function Navbar() {
             </div> */}
 
             {/* CTA Button */}
-            <div className="hidden md:block">
+            {/* <div className="hidden md:block">
               <Button variant="ghost" className="relative inline-flex items-center gap-4 px-12 py-6 rounded-xl bg-black/60 backdrop-blur-md backdrop-saturate-150 backdrop-brightness-100 border border-white/20 text-white font-semibold shadow-[0_0_10px_rgba(252,211,77,0.18)]">
-                Get Started
+                Coming Soon 
               </Button>
-            </div>
+            </div> */}
 
             {/* Mobile Menu Button */}
-            <button
+            {/* <button
               type="button"
               className="md:hidden relative inline-flex items-center gap-4 px-6 py-3 rounded-xl bg-black/60 backdrop-blur-md backdrop-saturate-150 backdrop-brightness-100 border border-white/20 text-white font-semibold shadow-[0_0_10px_rgba(252,211,77,0.18)]"
-              // onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              // aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             >
-              {/* {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />} */}
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
               Get Started
-            </button>
+            </button> */}
           </div>
         </div>
       </motion.nav>

@@ -32,10 +32,10 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Mail, href: "#", label: "Email" }
+  // { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/7zeromedia/", label: "LinkedIn" },
+  { icon: Instagram, href: "https://www.instagram.com/7zero.media?igsh=MTh0cDNjNmE0eTU1Yg==", label: "Instagram" },
+  { icon: Mail, href: "mailto:Info@7zero.media", label: "Email" }
 ]
 
 export function Footer() {
