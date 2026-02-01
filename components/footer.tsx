@@ -52,7 +52,7 @@ export function Footer() {
                 alt="7ZeroMedia Logo"
                 width={40}
                 height={40}
-                 className="h-30 w-30 object-contain"
+                 className="h-28 w-28 object-contain"
               />
             </a>
             <p className="mb-6 max-w-sm text-muted-foreground">
