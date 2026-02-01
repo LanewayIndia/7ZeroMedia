@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: `${siteUrl}/70m.png`,
+        url: `${siteUrl}/7zeromediaLogo.png`,
         width: 1200,
         height: 630,
         alt: "7ZeroMedia OG Image",
