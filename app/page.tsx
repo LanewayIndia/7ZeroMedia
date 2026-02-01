@@ -14,14 +14,14 @@ export default function HomePage() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-background">
       {/*Click Spark Animation */}
-      {/* Navigation */}
-      <Navbar />
       <ClickSpark
         sparkColor='#fff'
         sparkSize={10}
         sparkRadius={15}
         sparkCount={8}
         duration={400}>
+        {/* Navigation */}
+        <Navbar />
 
         {/* Page sections */}
         <HeroSection />
