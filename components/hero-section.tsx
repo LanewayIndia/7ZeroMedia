@@ -32,7 +32,7 @@ export function HeroSection() {
       <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-background/0 via-background/60 to-background" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center text-center">
+      <div className="relative my-24 z-10 flex flex-col justify-center items-center text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -40,7 +40,7 @@ export function HeroSection() {
           className="mb-6"
         >
           <Image
-            src="/70m.png"
+            src="/Seven-Zero-Logo.png"
             alt="7ZeroMedia Logo"
             width={340}
             height={340}
@@ -48,8 +48,8 @@ export function HeroSection() {
           />
         </motion.div>
 
-        <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground">
-          AI Powered Media Marketing For Modern Brands. Transform Your Growth With Intelligent Automation.
+        <p className="mx-auto mb-10 max-w-2xl text-lg text-amber-50">
+          An AI-powered media ecosystem redefining digital narratives through content, culture, and full-scale brand evolution.
         </p>
         <motion.div
             initial={{ scale: 0.95, opacity: 0, y: 16}}
